@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en_US">
+  <head>
+    <meta charset="utf-8">
+    <title>HalloVReen · a webVR experiment for kids by Jorge Fuentes</title>
+    <meta name="description" content="It's All Hallow's Eve and the citizens of Creepville are restless! Can you spot them all? A webVR experience by Jorge Fuentes made with A-Frame. Compatible with Google Cardboard up to Oculus Rift and Go, Vive, Gear VR.">
+    <meta property="og:title" content="HalloVReen">
+    <meta property="og:description" content="It's All Hallow's Eve and the citizens of Creepville are restless! Can you spot them all? A webVR experience by Jorge Fuentes made with A-Frame. Compatible with Google Cardboard up to Oculus Rift and Go, Vive, Gear VR.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jorgefuentes.net/projects/halloVReen/">
+    <meta property="og:image" content="https://www.jorgefuentes.net/projects/halloVReen/halloVReen_screenshot.jpg">
+
+    <script src="components/howler.min.js"></script>
+    <script src="components/aframe-v0.8.2.min.js"></script>
+    <script src="components/correct-gamma.js"></script>
+    <script src="components/aframe-extras.min.js"></script>
+    <script src="components/animation-control.js"></script>
+    <script src="components/swap-model.js"></script>
+    <script src="components/autoplay.js"></script>
+    <script src="components/score.js"></script>
+
+    <script>
+
+      var clicksEnabled = false;
+
+      var bgAudio = new Howl({
+        src: ['sounds/bgsound.ogg', 'sounds/bgsound.mp3'],
+        autoplay: false,
+        loop: true,
+        volume: 0.2
+      });
+
+      var sounds = new Howl({
+        "src": [
+          "sounds/sounds.ogg",
+          "sounds/sounds.m4a",
+          "sounds/sounds.mp3",
+          "sounds/sounds.ac3"
+        ],
+        "sprite": {
+          "bat": [
+            0,
+            649.342403628118
+          ],
+          "feet": [
+            2000,
+            7185.736961451248
+          ],
+          "hand": [
+            11000,
+            1777.7777777777785
+          ],
+          "pumpkin_laugh": [
+            14000,
+            2480.408163265306
+          ],
+          "skeleton": [
+            18000,
+            2680.2040816326526
+          ],
+          "vampire": [
+            22000,
+            5199.36507936508
+          ],
+          "werewolf": [
+            29000,
+            7582.040816326533
+          ],
+          "witch_laugh": [
+            38000,
+            2906.258503401361
+          ],
+          "zombi": [
+            42000,
+            1635.192743764172
+          ]
+        },
+        volume: 2
+      });
+
+    </script>
+
+  </head>
+  <body>
+    <a-scene fog="type: linear; color: #597360; near: 2; far: 30;" background="color: #000" correct-gamma>
+      <a-assets timeout="30000">
+        <a-asset-item id="autoplay_dome" src="models/autoplay_dome.gltf"></a-asset-item>
+        <a-asset-item id="skeleton" src="models/skeleton.gltf"></a-asset-item>
+        <a-asset-item id="village" src="models/village.gltf"></a-asset-item>
+        <a-asset-item id="village_trees_outer" src="models/village_trees_outer.gltf"></a-asset-item>
+        <a-asset-item id="village_trees_middle" src="models/village_trees_middle.gltf"></a-asset-item>
+        <a-asset-item id="village_trees_inner" src="models/village_trees_inner.gltf"></a-asset-item>
+        <a-asset-item id="zombi" src="models/zombi.gltf"></a-asset-item>
+        <a-asset-item id="werewolf" src="models/werewolf.gltf"></a-asset-item>
+        <a-asset-item id="witch" src="models/witch.gltf"></a-asset-item>
+        <a-asset-item id="vampire" src="models/vampire.gltf"></a-asset-item>
+        <a-asset-item id="pumpkin_happy" src="models/pumpkin_happy.gltf"></a-asset-item>
+        <a-asset-item id="pumpkin_evil" src="models/pumpkin_evil.gltf"></a-asset-item>
+        <a-asset-item id="hand" src="models/hand.gltf"></a-asset-item>
+        <a-asset-item id="feet" src="models/feet.gltf"></a-asset-item>
+        <a-asset-item id="bat" src="models/bat.gltf"></a-asset-item>
+        <a-asset-item id="ui_message" src="models/ui_message.gltf"></a-asset-item>
+        <a-asset-item id="ui_button" src="models/ui_button.gltf"></a-asset-item>
+        <a-asset-item id="ui_credits" src="models/ui_credits.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-camera>
+        <a-entity 
+          raycaster="objects: .clickable"
+          cursor="fuse: true; fuseTimeout: 150"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.008"
+          material="color: white; shader: flat"
+        >
+          <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="1.5 1.5 1.5" dur="150"></a-animation>
+        </a-entity>
+      </a-camera>
+
+      <a-entity
+        id="dome"
+        gltf-model="#autoplay_dome"
+        scale="1 3 1"
+        position="0 0 0"
+      >
+      </a-entity>
+
+      <a-entity
+        id="ui"
+        position="0 1.25 -2.5" scale="1.25 1.25 1.25"
+      >
+        <a-entity light="type: ambient; color: #FFF; intensity: 0.5"></a-entity>
+        <a-entity
+        gltf-model="#ui_message"
+        >
+        </a-entity>
+        <a-entity
+        class="clickable"
+        gltf-model="#ui_button"
+        autoplay
+        >
+        </a-entity>
+      </a-entity>
+
+      <a-entity
+        gltf-model="#village_trees_outer"
+        position="0 0 0"
+        rotation="0 30 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#village_trees_middle"
+        position="0 0 0"
+        rotation="0 30 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#village_trees_inner"
+        position="0 0 0"
+        rotation="0 30 0"
+      ></a-entity>
+
+      <a-entity
+        gltf-model="#village"
+        position="0 0 0"
+        rotation="0 30 0"
+        animation-mixer
+      >
+
+        <a-entity light="type:point;color:#f389e1;intensity:0.5;distance:15;penumbra:1" position="0 3 0"></a-entity>
+
+        <a-entity
+          id="skeletonTarget"
+          gltf-model="#skeleton"
+          position="7.441 0.802 -0.526"
+          rotation="0 -80 0"
+          scale="1 1 1"
+          class="clickable"
+          animation-mixer="clip: idle; crossFadeDuration: 0.5;"
+        >
+          <a-box
+            width="2" depth="0.5" height="2"
+            position="0 1 0"
+            visible="false"
+            class="clickable"
+            animation-control="sound: skeleton; target: #skeletonTarget; clip: dance; repetitions: 0; crossFadeDuration: 0.5;"
+          >
+          </a-box>
+        </a-entity>
+
+        <a-entity
+          id="zombiTarget"
+          gltf-model="#zombi"
+          position="-0.747 0.665 -9.681"
+          rotation="0 0 0"
+          scale="1.25 1.25 1.25"
+          animation-mixer="clip: idle; crossFadeDuration: 1;"
+        >
+          <a-box
+            width="2" depth="0.5" height="2"
+            position="0 1 0"
+            visible="false"
+            class="clickable"
+            animation-control="sound: zombi; target: #zombiTarget; clip: dance; repetitions: 0; crossFadeDuration: 1;"
+          >
+          </a-box>
+        </a-entity>
+
+        <a-entity
+          position="-3 0 -6.8"
+          rotation="0 25 0"
+        >
+          <a-entity
+            id="pumpkin_happyTarget"
+            gltf-model="#pumpkin_happy"
+            scale="1 1 1"
+            class="clickable"
+            visible="true"
+            animation-mixer
+            swap-model="from: #pumpkin_happyTarget; to: #pumpkin_evilTarget; sound: pumpkin_laugh;"
+          >
+          </a-entity>
+
+          <a-entity
+            id="pumpkin_evilTarget"
+            gltf-model="#pumpkin_evil"
+            scale="1 1 1"
+            position="0 -10 0"
+            visible="true"
+          >
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          id="handTarget"
+          gltf-model="#hand"
+          scale="1 1 1"
+          class="clickable"
+          visible="true"
+          position="-4.35 -0.2 2.85"
+          rotation="0 120 0"
+          animation-mixer="clip: idle;"
+          animation-control="sound: hand; target: #handTarget; clip: animation; repetitions: 0;"
+        >
+        </a-entity>
+
+        <a-entity
+          id="feetTarget"
+          gltf-model="#feet"
+          scale="1 1 1"
+          class="clickable"
+          visible="true"
+          position="-3.8 -0.1 -3.5"
+          rotation="0 57 0"
+          animation-mixer="clip: idle;"
+          animation-control="sound: feet; target: #feetTarget; clip: animation; repetitions: 0;"
+        >
+        </a-entity>
+
+        <a-entity
+          id="vampireTarget"
+          gltf-model="#vampire"
+          class="clickable"
+          visible="true"
+          position="-5.6 0.04 -0.46"
+          rotation="0 83.89 0"
+          scale="1 1 1"
+          animation-mixer="clip: idle;"
+          animation-control="lightOn: #vampireLight; sound: vampire; target: #vampireTarget; clip: animation; repetitions: 0;"
+        >
+          <a-entity
+            id="vampireLight"
+            light="type:spot; color:#EE3030; intensity:10;distance:3;penumbra:1"
+            position="0.06 0.9 0.9"
+            rotation="58.6 -13.3 -24.8"
+          >
+          </a-entity>
+        </a-entity>
+
+        <a-entity
+          id="werewolfTarget"
+          gltf-model="#werewolf"
+          class="clickable"
+          visible="true"
+          position="-3 11 -13"
+          scale="1 1 1"
+          animation-mixer="clip: idle;"
+        >
+          <a-box
+            position="-0.55 3 2.3"
+            width="10.87" height="6.2" depth="1"
+            rotation="0 10.53 0"
+            visible="false"
+            class="clickable"
+            animation-control="sound: werewolf; target: #werewolfTarget; clip: animation; repetitions: 0;"
+          >
+          </a-box>
+        </a-entity>
+
+        <a-entity
+          id="witchTarget"
+          gltf-model="#witch"
+          scale="1 1 1"
+          animation-mixer="clip: idle; crossFadeDuration: 1;"
+        >
+          <a-box
+            width="5" depth="6" height="4"
+            position="-16.62 11.17 -1.15"
+            visible="false"
+            class="clickable"
+            animation-control="sound: witch_laugh; target: #witchTarget; clip: animation; repetitions: 0; crossFadeDuration: 1;"
+          >
+          </a-box>
+        </a-entity>
+
+        <a-entity
+          id="batTarget"
+          gltf-model="#bat"
+          scale="1 1 1"
+          class="clickable"
+          visible="true"
+          position="0 0 0"
+          rotation="0 0 0"
+          animation-mixer="clip: idle; crossFadeDuration: 0;"
+          animation-control="sound: bat; target: #batTarget; clip: animation; repetitions: 0; crossFadeDuration: 0;"
+        >
+        </a-entity>
+
+      </a-entity>
+
+    <a-entity
+      gltf-model="#ui_credits"
+      position="2.04 3.3 5.67"
+      rotation="0 210 0"
+      scale="1 1 1"
+    >
+    </a-entity>
+
+    <a-entity id="score" score position="0 1.073 -4.23" scale="5 5 5" rotation="-10.9 0 1.5">
+      <a-entity id="scoreValue" text="font:mozillavr; width:0.8; color:#fab80e; align:center; baseline:bottom; wrapCount:15" position="0 0.07 0">
+      </a-entity>
+      <a-entity id="scoreText" text="font:mozillavr; value: CREEPYZENS FOUND; width:0.8; color:#fab80e; align:center; baseline:top; lineHeight:120" position="0 0 0">
+      </a-entity>
+      <a-entity id="scoreGameOver" text="font:mozillavr; value: Happy Halloween!; width:0.8; color:#a4ec62; align:center; baseline:top; lineHeight:120" position="0 -0.05 0">
+      </a-entity>
+    </a-entity>
+
+    </a-scene>
+
+  </body>
+</html>

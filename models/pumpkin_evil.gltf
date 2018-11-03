@@ -1,0 +1,510 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 2163,
+            "max" : [
+                708
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 709,
+            "max" : [
+                0.74498450756073,
+                1.1340628862380981,
+                0.7314562797546387
+            ],
+            "min" : [
+                -0.7441340684890747,
+                -0.0019129043212160468,
+                -0.7441340684890747
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 709,
+            "max" : [
+                1.0,
+                0.999786376953125,
+                0.999969482421875
+            ],
+            "min" : [
+                -1.0,
+                -0.99993896484375,
+                -0.999969482421875
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 709,
+            "max" : [
+                0.9991713166236877,
+                0.9912149328738451
+            ],
+            "min" : [
+                0.5079177618026733,
+                0.009689033031463623
+            ],
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 709,
+            "max" : [
+                3,
+                3,
+                3,
+                3
+            ],
+            "min" : [
+                0,
+                0,
+                0,
+                0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 709,
+            "max" : [
+                1.0907195806503296,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min" : [
+                7.774680852890015e-05,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                1.0,
+                7.105429051666896e-15,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.9050657749176025,
+                0.0,
+                6.785418094068518e-08,
+                0.9050658345222473,
+                1.0,
+                0.0,
+                6.751618997213882e-08,
+                0.21010175347328186,
+                0.0,
+                1.0
+            ],
+            "min" : [
+                -1.0,
+                0.0,
+                -1.5099580252808664e-07,
+                0.0,
+                -1.3666111442489637e-07,
+                -0.4252719283103943,
+                0.0,
+                0.0,
+                -6.421425524649749e-08,
+                0.0,
+                -0.4493779242038727,
+                0.0,
+                0.0,
+                -0.49404096603393555,
+                -0.44713956117630005,
+                1.0
+            ],
+            "type" : "MAT4"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                1.0,
+                7.105429051666896e-15,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.9050657749176025,
+                0.0,
+                6.785418094068518e-08,
+                0.9050658345222473,
+                1.0,
+                0.0,
+                6.751618997213882e-08,
+                0.21010175347328186,
+                0.0,
+                1.0
+            ],
+            "min" : [
+                -1.0,
+                0.0,
+                -1.5099580252808664e-07,
+                0.0,
+                -1.3666111442489637e-07,
+                -0.4252719283103943,
+                0.0,
+                0.0,
+                -6.421425524649749e-08,
+                0.0,
+                -0.4493779242038727,
+                0.0,
+                0.0,
+                -0.49404096603393555,
+                -0.44713956117630005,
+                1.0
+            ],
+            "type" : "MAT4"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                1.0,
+                7.105429051666896e-15,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.9050657749176025,
+                0.0,
+                6.785418094068518e-08,
+                0.9050658345222473,
+                1.0,
+                0.0,
+                6.751618997213882e-08,
+                0.21010175347328186,
+                0.0,
+                1.0
+            ],
+            "min" : [
+                -1.0,
+                0.0,
+                -1.5099580252808664e-07,
+                0.0,
+                -1.3666111442489637e-07,
+                -0.4252719283103943,
+                0.0,
+                0.0,
+                -6.421425524649749e-08,
+                0.0,
+                -0.4493779242038727,
+                0.0,
+                0.0,
+                -0.49404096603393555,
+                -0.44713956117630005,
+                1.0
+            ],
+            "type" : "MAT4"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 11,
+            "max" : [
+                1.6333333333333333
+            ],
+            "min" : [
+                0.0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 11,
+            "max" : [
+                -1.6237658329032456e-08,
+                0.9765976667404175,
+                0.524700939655304,
+                -6.427035259548575e-08
+            ],
+            "min" : [
+                -3.961381622730187e-08,
+                0.8512866497039795,
+                0.21507440507411957,
+                -7.373107280272961e-08
+            ],
+            "type" : "VEC4"
+        }
+    ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 4,
+                        "path" : "rotation"
+                    }
+                }
+            ],
+            "name" : "pumpkin_evil",
+            "samplers" : [
+                {
+                    "input" : 9,
+                    "interpolation" : "LINEAR",
+                    "output" : 10
+                }
+            ]
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 4326,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8508,
+            "byteOffset" : 4328,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8508,
+            "byteOffset" : 12836,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 5672,
+            "byteOffset" : 21344,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 5672,
+            "byteOffset" : 27016,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 11344,
+            "byteOffset" : 32688,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 256,
+            "byteOffset" : 44032
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 256,
+            "byteOffset" : 44288
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 256,
+            "byteOffset" : 44544
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 44,
+            "byteOffset" : 44800
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 176,
+            "byteOffset" : 44844
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 45020,
+            "uri" : "pumpkin_evil.bin"
+        }
+    ],
+    "images" : [
+        {
+            "name" : "Pumpkins_HappyEvil",
+            "uri" : "Pumpkins_HappyEvil.png"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                0.5225215554237366,
+                0.5225215554237366,
+                0.5225215554237366
+            ],
+            "emissiveTexture" : {
+                "index" : 0
+            },
+            "name" : "pumpkin_evil",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "pumpkin_evil",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "JOINTS_0" : 4,
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 3,
+                        "WEIGHTS_0" : 5
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "children" : [
+                1,
+                2
+            ],
+            "name" : "Armature"
+        },
+        {
+            "mesh" : 0,
+            "name" : "pumpkin_evil",
+            "skin" : 0
+        },
+        {
+            "children" : [
+                3,
+                4,
+                5
+            ],
+            "name" : "Armature_Bone"
+        },
+        {
+            "name" : "Armature_Bone.001",
+            "translation" : [
+                0.0,
+                0.49404096603393555,
+                0.0
+            ]
+        },
+        {
+            "name" : "Armature_Bone.002",
+            "rotation" : [
+                -3.961381622730187e-08,
+                0.8512866497039795,
+                0.524700939655304,
+                -6.427035259548575e-08
+            ],
+            "scale" : [
+                1.0,
+                0.9999998211860657,
+                1.0
+            ],
+            "translation" : [
+                0.0,
+                0.49404096603393555,
+                0.0
+            ]
+        },
+        {
+            "name" : "Armature_Bone.003",
+            "rotation" : [
+                -6.373364414002936e-08,
+                0.5360634922981262,
+                0.8441776633262634,
+                -4.047166868303975e-08
+            ],
+            "scale" : [
+                1.0,
+                0.9999998211860657,
+                0.9999999403953552
+            ],
+            "translation" : [
+                0.0,
+                0.49404096603393555,
+                0.0
+            ]
+        }
+    ],
+    "samplers" : [
+        {}
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "skins" : [
+        {
+            "inverseBindMatrices" : 6,
+            "joints" : [
+                2,
+                3,
+                4,
+                5
+            ],
+            "skeleton" : 0
+        },
+        {
+            "inverseBindMatrices" : 7,
+            "joints" : [
+                2,
+                3,
+                4,
+                5
+            ],
+            "skeleton" : 0
+        },
+        {
+            "inverseBindMatrices" : 8,
+            "joints" : [
+                2,
+                3,
+                4,
+                5
+            ],
+            "skeleton" : 0
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ]
+}
